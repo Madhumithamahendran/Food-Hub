@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.homee{
+    padding: 10px;
+    font-family:"Sour Gummy", sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    overflow:visible;
+   
+    
+}
+.foodi{
+    display: flex;
+    overflow-y:hidden;
+   border-bottom: 1px solid rgb(241, 238, 238);
+      
+}
+.foodi::-webkit-scrollbar {
+    display: none;
+  }
+.foodi img{
+    height: 250px;
+}
+.res{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.foodi img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.foodi img:hover {
+    transform: scale(1.05);
+}
+
+.restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+    padding: 20px;
+}
+
+
+.product {
+    position: relative;
+    flex: 1 1 calc(25% - 25px); 
+    max-width: calc(25% - 25px);
+    
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product .favorite-overlay {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+}
+
+
+.product img {
+    width: 100%; 
+    height: 250px; 
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.product h4 {
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 15px 0;
+    color: #333;
+}
+
+.bor{
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    
+   
+}
+.bor span{
+    width: 60%;
+    border: 1px solid  #333;
+}
+.delivery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+footer{
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 60px;
+}
+.footerContent{
+    display: flex;
+    gap: 50px; 
+    justify-content: center;
+}
+.cont{
+    display: flex;
+    gap: 40px;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.contact li:first-child{
+    margin-top:10px;
+    gap:10px;
+}
+.contact li,
+.avai li{
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+.Soci{
+    list-style: none;
+    display: flex;
+    padding-top: 10px;
+    gap: 10px;
+}
+svg{
+    color: #333;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .product {
+        flex: 1 1 calc(25% - 20px); 
+        max-width: calc(25% - 20px);
+        
+    }
+    .contact li,
+    .avai li{
+        margin-left: 20px;
+        
+    }
+    .cont{
+        display: flex;
+        gap: 100px;
+        flex-wrap: nowrap;
+        font-size:23px;
+    }
+    
+}
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .product {
+        flex: 1 1 calc(33.33% - 20px); 
+        max-width: calc(33.33% - 20px);
+    }
+    .contact li,
+    .avai li{
+        margin-left: 20px;
+        gap:10px;
+    }
+    .cont{
+        display: flex;
+        gap: 100px;
+        font-size:20px;
+    }
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
+    }
+}
+
+
+@media (max-width: 768px) and (min-width: 480px) {
+    .product {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    .contact li{
+        margin-left: 20px;
+        gap:10px;
+    }
+    .cont{
+        display: flex;
+        gap: 100px;
+        flex-wrap: wrap;
+        font-size:18px;
+        
+    }
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+    .contact li{
+        margin-left: 20px;
+        gap:10px;
+    }
+    .cont{
+        display: flex;
+        gap: 100px;
+    }
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+        gap: 30px; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .foodi {
+        gap: 15px;
+    }
+    .foodi img{
+        height: 200px;
+        width: 200px;
+    }
+    .res{
+        font-size: 30px;
+       
+    }
+
+    
+}
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    
+    .foodi {
+        gap: 15px;
+    }
+    .foodi img{
+        height: 150px;
+        width: 150px;
+    }
+    .res{
+        font-size: 28px;
+       
+    }
+    .homee{
+       
+       
+        margin-left: 100px;
+        margin-right: 100px;
+        
+    }
+
+}
+
+
+@media (max-width: 768px) and (min-width: 550px) {
+    .foodi {
+        gap: 15px;
+    }
+    .foodi img{
+        height: 130px;
+        width: 130px;
+    }
+    .res{
+        font-size: 24px;
+       
+    }
+    .homee{
+       
+       
+        margin-left: 30px;
+        margin-right: 30px;
+        
+    }
+}
+@media (max-width: 550px) and (min-width: 468px) {
+    .foodi {
+        gap: 15px;
+    }
+    .foodi img{
+        height: 100px;
+        width: 100px;
+    }
+    .res{
+        font-size: 20px;
+       
+    }
+    .homee{
+       
+       
+        margin-left: 30px;
+        margin-right: 30px;
+        
+    }
+}
+
+
+

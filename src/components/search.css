@@ -1,0 +1,199 @@
+.searchPage{
+margin: 40px;
+padding: 10px;
+font-family:"Sour Gummy", sans-serif;
+margin-left: 100px;
+margin-right: 100px;
+overflow:visible;
+}
+.search{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+.search input[type='text']{
+    flex: 1;
+    min-width: 0;
+    height: 52px;
+    border: 2px solid #3d3b3b;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    padding: 0 16px;
+    font-size: 1rem;
+}
+.searchIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 52px;
+    border: 2px solid #3d3b3b;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    background: #fff;
+    cursor: pointer;
+}
+.searchIcon svg{
+    width: 18px;
+    height: 18px;
+}
+.foodii{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    overflow-y: hidden;
+    border-bottom: 1px solid rgb(241, 238, 238);
+    padding-bottom: 16px;
+}
+.foodii::-webkit-scrollbar {
+    display: none;
+}
+.foodii img{
+    height: 150px;
+    cursor: pointer;
+}
+/* card and label styling for search results */
+.cuisine-card{
+    width: 160px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    padding:12px;
+    border-radius:12px;
+    transition:all .28s ease;
+    transform:translateY(0);
+    background:#fff;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.cuisine-card img{
+    height: 130px;
+    width: 130px;
+    object-fit:cover;
+    border-radius:14px;
+}
+.cuisine-name{
+    font-weight:700;
+    color:#333;
+    margin:0;
+    text-align:center;
+}
+.cuisine-card::before,
+.cuisine-card::after {
+    content: none !important;
+}
+.cuisine-card .cuisine-name + .cuisine-name {
+    display: none;
+}
+/* legacy class fallback: hide old duplicate label if present */
+.card-label{display:none}
+.no-items{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;width:100%}
+.no-icon{font-size:48px;opacity:.9;transform:translateY(-6px);animation:bounce 1s infinite}
+.no-text{margin-top:8px;font-weight:700;color:#555}
+@keyframes bounce{0%{transform:translateY(-6px)}50%{transform:translateY(0)}100%{transform:translateY(-6px)}}
+.res{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.foodii img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.foodii img:hover {
+    transform: scale(1.05);
+}
+
+
+@media (min-width: 1024px) {
+    .foodii {
+        gap: 15px;
+        display:flex;flex-wrap:wrap;
+    }
+    .foodii img{
+        height: 150px;
+        width: 150px;
+    }
+    .res{
+        font-size: 28px;
+       
+    }
+
+    
+}
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    
+    .foodii {
+        gap: 15px;
+    }
+    .foodii img{
+        height: 150px;
+        width: 150px;
+    }
+    .res{
+        font-size: 24;
+       
+    }
+    .searchPage{
+       
+       
+        margin-left: 100px;
+        margin-right: 100px;
+        
+    }
+
+}
+
+
+@media (max-width: 768px) and (min-width: 550px) {
+    .foodii {
+        gap: 15px;
+    }
+    .foodii img{
+        height: 130px;
+        width: 130px;
+    }
+    .res{
+        font-size: 22px;
+       
+    }
+    .searchPage{
+       
+       
+        margin-left: 30px;
+        margin-right: 30px;
+        
+    }
+}
+@media (max-width: 550px) and (min-width: 468px) {
+    .foodii {
+        gap: 15px;
+    }
+    .foodii img{
+        height: 100px;
+        width: 100px;
+    }
+    .res{
+        font-size: 18px;
+       
+    }
+    .searchPage{
+       
+       
+        margin-left: 30px;
+        margin-right: 30px;
+        
+    }
+}
